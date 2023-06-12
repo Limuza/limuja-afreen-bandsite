@@ -1,0 +1,26 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+
+.container{
+
+}
+
+@include tablet {
+
+}
+
+@include desktop {
+
+}
+
+&__image {
+
+}
+@include tablet {
+
+}
+
+@include desktop {
+
+}

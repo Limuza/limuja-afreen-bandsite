@@ -1,0 +1,14 @@
+.header {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=global.css.map */
