@@ -12,3 +12,13 @@
     @content;
   }
 }
+
+@mixin border-radius($radius) {
+  border-radius: ($radius);
+  margin: 0;
+}
+
+.box {
+  @include border-radius(10px);
+  padding: 0;
+}
