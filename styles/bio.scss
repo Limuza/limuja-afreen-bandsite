@@ -1,9 +1,52 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-body {
-  padding: 48px;
+$primary: #323232, #AFAFAF, #FFFFFF;
+$secondary: #000000, #E1E1E1, #FAFAFA;
+
+
+
+
+.nav {
+  &__navigation {
+    background-color: #323232;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    box-sizing: border-box;
+    border-radius:0% ;
+    width:auto;
+    height:auto;
+    margin:auto;
+  }
+  .button {
+    background-color: $secondary-color;
+    color: $white-color;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: darken($secondary-color, 10%);
+    }
 }
+}
+
+body{
+&__img-div {
+  width: 20%;
+  border: 3px dotted rgb(red, green, blue);
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+
+}
+
+
 
 head {
   background-color: #323232;
@@ -23,17 +66,7 @@ head {
   height:auto;
   margin:auto;
 }
-.nav {
-  background-color: #323232;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  box-sizing: border-box;
-  border-radius:0% ;
-  width:auto;
-  height:auto;
-  margin:auto;
-}
+
 
 .flowers {
   margin-top: -40px;
@@ -59,6 +92,7 @@ head {
   width: 400px;
   height: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items:last baseline;
 }
@@ -100,13 +134,3 @@ ul {
   border: 2px;
   padding: .5em;
 }
-
-
-@include tablet {
-
-}
-
-@include desktop {
-
-}
-

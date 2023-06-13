@@ -4,17 +4,17 @@
   padding: 0;
 }
 
-.header {
+.head {
   display: flex;
   flex-direction: column;
 }
 @media screen and (min-width: 768px) {
-  .header {
+  .head {
     flex-direction: column;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header {
+  .head {
     flex-direction: column;
   }
 }/*# sourceMappingURL=global.css.map */
