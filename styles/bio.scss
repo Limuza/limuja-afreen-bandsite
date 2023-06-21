@@ -1,65 +1,51 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-$primary: #323232, #AFAFAF, #FFFFFF;
-$secondary: #000000, #E1E1E1, #FAFAFA;
 
 
 
 
-.nav {
-  &__navigation {
-    background-color: #323232;
+  .nav {
+    background-color: $primary-black;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    box-sizing: border-box;
-    border-radius:0% ;
-    width:auto;
-    height:auto;
-    margin:auto;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100vw;
+    height: 3.125em;
+    margin:1rem;
+    &__logo{
+      padding: 0.625rem;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+  &__firstbox {
+    line-height: 1.75rem;
+    padding: 0.625rem;
+    flex-direction: column;
+    justify-content: center;
   }
+
+}
+
   .button {
-    background-color: $secondary-color;
-    color: $white-color;
+    background-color: $secondary-darkblack;
+    color: $primary-white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
     
     &:hover {
-      background-color: darken($secondary-color, 10%);
+      background-color: darken($secondary-mercury, 10%);
     }
 }
-}
 
-body{
-&__img-div {
-  width: 20%;
-  border: 3px dotted rgb(red, green, blue);
-  display: flex;
-  align-items: center;
-}
-
-
-
-
-
-}
-
-
-
-head {
-  background-color: #323232;
-  line-height: 68px;
-  display:flex;
-  margin: 1rem;
-  padding: 16px;
-}
 
 .div {
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
   box-sizing: border-box;
   border-radius:0% ;
   width:auto;
@@ -69,17 +55,38 @@ head {
 
 
 .flowers {
-  margin-top: -40px;
-  margin-right: 30px;
-  margin-bottom: 40px;
-  margin-left: 4em;  
-  background-image: ("./assets/Images/hero-bio.jpg");
-  background-size: cover;
-  width: 400px;
-  height: 200px;
   display: flex;
-  justify-content: center;
-  align-items:baseline;
+	flex-direction: column;
+	margin: 1.25rem;
+	justify-content: center;
+	border-radius: 5px;
+	@include tablet {
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-evenly;
+		// align-content: space-evenly;
+		width: 30vw;
+	}
+	@include desktop {
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-evenly;
+		// align-content: space-evenly;
+		width: 30vw;
+	}
+	&__img {
+		text-align: center;
+		padding: 10px 0;
+		& img {
+			width: 100px;
+			height: 100px;
+		}
+		@include tablet {
+		}
+
+		@include desktop {
+		}
+	}
 }
 
 .firstbox {
@@ -87,7 +94,6 @@ head {
   margin-right: 30px;
   margin-bottom: 40px;
   margin-left: 4em;  
-  background-image: ("./assets/Images/hero-bio.jpg");
   background-size: cover;
   width: 400px;
   height: 200px;
@@ -104,19 +110,32 @@ head {
   }
 
 .box {
-  margin-top: -40px;
-  margin-right: 30px;
-  margin-bottom: 40px;
-  margin-left: 4em;  
+  display: flex;
+	flex-direction: column;
+	margin: 1.25rem;
+	justify-content: center;
+	border-radius: 5px;
+	@include tablet {
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-evenly;
+		// align-content: space-evenly;
+		width: 30vw;
+	}
+	@include desktop {
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-evenly;
+		// align-content: space-evenly;
+		width: 30vw;
+	} 
 }
 
 h1 {
-  color: blue;
-
-
+  color: $primary-black;
 }
 
-.content{
+.box{
   color: black;
 }
 
@@ -133,4 +152,65 @@ p,
 ul {
   border: 2px;
   padding: .5em;
+}
+
+.photogallery {
+  display: flex;
+	flex-direction: column;
+	margin: 1.25rem;
+	justify-content: center;
+	border-radius: 5px;
+	@include tablet {
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-evenly;
+		// align-content: space-evenly;
+		width: 30vw;
+	}
+	@include desktop {
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-evenly;
+		// align-content: space-evenly;
+		width: 30vw;
+	}
+	&__img {
+  text-align: center;
+		padding: 10px 0;
+		& img {
+			width: 100px;
+			height: 100px;
+      display: flex;
+      flex-wrap: wrap;
+      border-top: 100px;
+      border-bottom: 100px;
+		}
+		@include tablet {
+		}
+
+		@include desktop {
+		}
+	}
+}
+
+.footer{
+  display: flex;
+	flex-direction: column;
+	margin: 1.25rem;
+	justify-content: center;
+	border-radius: 5px;
+	@include tablet {
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-evenly;
+		// align-content: space-evenly;
+		width: 30vw;
+	}
+	@include desktop {
+		// flex-direction: row;
+		// flex-wrap: wrap;
+		// justify-content: space-evenly;
+		// align-content: space-evenly;
+		width: 30vw;
+	} 
 }
