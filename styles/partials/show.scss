@@ -1,0 +1,38 @@
+.show-hero-banner {
+  display: flex;
+  flex-direction: row;
+  background-image: url("../assets/images/hero-shows.jpg");
+  align-items:center;
+  background-size: cover;
+  min-height: 30vh;
+  &__title {
+    font-family: $bold-font;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    @media screen and (min-width: 1000px) {
+      font-size: 60px;
+      padding: 20px;
+      @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        margin-left: 100px;
+        margin-right: 100px;
+        & img {
+          height: 20vh;
+          width: 75vw;
+          margin: 5px;
+          @media screen and (min-width: 1000px) {
+            height: 200px;
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,120 @@
+@use './partials/variables' as *;
+// Declaration
+@font-face {
+    font-family: $regular-font;
+    src: url('../assets/fonts/AvenirNextLTPro-Regular.ttf') format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: $demi-font;
+    src: url('../assets/fonts/AvenirNextLTProDemi.ttf') format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: $bold-font;
+    src: url('../assets/fonts/AvenirNextLTProBold.ttf') format("truetype");
+    font-weight: 700;
+}
+
+// body
+body {
+    font-family: $regular-font;
+}
+
+// Remove this after coding
+div,
+main,
+section,
+header,
+footer {
+    border: 1px solid red;
+}
+
+// Header
+header {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+
+    & nav {
+        // header nav {
+        & ul {
+            list-style-type: none;
+
+            & li {
+                border: 1px solid $primary-black;
+                display: inline-block;
+            }
+        }
+    }
+
+    & .logo {
+        @media screen and (min-width:1000px) {
+            width: 30vw;
+
+        }
+    }
+
+    @media screen and (min-width:1000px) {
+        flex-direction: row;
+    }
+}
+
+// Container
+.container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+// Footer
+footer {
+    height: 70vh;
+
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 1000px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__title {
+        order: 1;
+        @media screen and (min-width: 1000px) {
+            width:30%;
+            display: inline-block;
+        }
+    }
+    &__socials {
+        order: 2;
+        @media screen and (min-width: 1000px) {
+            width:20%;
+            display: inline-block;
+        }
+    }
+    &__address {
+        order: 3;
+        @media screen and (min-width: 1000px) {
+            order: 4;
+            width:100%;
+        }
+    }
+    &__logo {
+        order: 4;
+        @media screen and (min-width: 1000px) {
+            order: 3;
+            width:40%;
+            display: inline-block;
+        }
+    }
+    &__copyright {
+        order: 5;
+        width:100%;
+        
+    }
+}
+
