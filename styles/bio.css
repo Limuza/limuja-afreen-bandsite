@@ -17,7 +17,13 @@
   font-size: 24px;
   padding: 10px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1280px) {
+  .hero-banner__title {
+    font-size: 60px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
   .hero-banner__title {
     font-size: 60px;
     padding: 20px;
@@ -43,7 +49,7 @@
 .about__content--left {
   margin-bottom: 10px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1280px) {
   .about__content {
     flex-direction: row;
   }

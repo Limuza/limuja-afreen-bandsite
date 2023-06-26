@@ -1,0 +1,76 @@
+@use "./partials/variables" as *;
+@use "./partials/mixins" as *;
+
+.show-hero-banner {
+  display: flex;
+  flex-direction: row;
+  background-image: url("../assets/images/hero-shows.jpg");
+  align-items:center;
+  background-size: cover;
+  min-height: 30vh;
+  &__title {
+    font-family: $bold-font;
+    color: $primary-white;
+    font-size: 24px;
+    padding: 10px;
+    @media screen and (min-width: $desktop-width) {
+      font-size: 60px;
+      padding: 20px;
+      @media screen and (min-width: $tablet-width) {
+        flex-direction: row;
+        margin-left: 100px;
+        margin-right: 100px;
+        & img {
+          height: 20vh;
+          width: 75vw;
+          margin: 5px;
+          @media screen and (min-width: $desktop-width) {
+            height: 200px;
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tickets {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  h3 {
+    color: $primary-silver
+  }
+  &__img {
+    height: 20vh;
+    width: auto;
+    &-caption {
+      font-style: italic;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    &--left {
+      margin-bottom: 10px;
+    }
+    
+    @media screen and (min-width: $desktop-width) {
+      flex-direction: row;
+      &--left {
+        margin-bottom: 0px;
+      }
+    }
+    @media screen and (min-width: $tablet-width) {
+      flex-direction: row;
+      &--left {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}

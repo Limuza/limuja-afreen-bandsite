@@ -1,0 +1,77 @@
+.box {
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.show-hero-banner {
+  display: flex;
+  flex-direction: row;
+  background-image: url("../assets/images/hero-shows.jpg");
+  align-items: center;
+  background-size: cover;
+  min-height: 30vh;
+}
+.show-hero-banner__title {
+  font-family: "Avenir Next Bold";
+  color: #FFFFFF;
+  font-size: 24px;
+  padding: 10px;
+}
+@media screen and (min-width: 1280px) {
+  .show-hero-banner__title {
+    font-size: 60px;
+    padding: 20px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-width: 768px) {
+  .show-hero-banner__title {
+    flex-direction: row;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  .show-hero-banner__title img {
+    height: 20vh;
+    width: 75vw;
+    margin: 5px;
+  }
+}
+@media screen and (min-width: 1280px) and (min-width: 768px) and (min-width: 1280px) {
+  .show-hero-banner__title img {
+    height: 200px;
+    width: 300px;
+  }
+}
+
+.tickets {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.tickets__img {
+  height: 20vh;
+  width: auto;
+}
+.tickets__img-caption {
+  font-style: italic;
+}
+.tickets__content {
+  display: flex;
+  flex-direction: column;
+}
+.tickets__content--left {
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 1280px) {
+  .tickets__content {
+    flex-direction: row;
+  }
+  .tickets__content--left {
+    margin-bottom: 0px;
+  }
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=show.css.map */
