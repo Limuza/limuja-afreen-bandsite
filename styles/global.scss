@@ -1,35 +1,25 @@
 @use './partials/variables' as *;
+
 // Declaration
 @font-face {
-    font-family: $regular-font;
-    src: url('../assets/fonts/AvenirNextLTPro-Regular.ttf') format("truetype");
-    font-weight: 400;
+	font-family: $regular-font;
+	src: url("../assets/fonts/AvenirNextLTPro-Regular.ttf") format("truetype"),
+		url("../assets/fonts/AvenirNextLTPro-Regular.otf") format("opentype");
+	font-weight: 400;
 }
 
 @font-face {
-    font-family: $demi-font;
-    src: url('../assets/fonts/AvenirNextLTProDemi.ttf') format("truetype");
-    font-weight: 600;
+	font-family: $demi-font;
+	src: url("../assets/fonts/AvenirNextLTProDemi.ttf") format("truetype"),
+		url("../assets/fonts/AvenirNextLTPro-Demi.otf") format("opentype");
+	font-weight: 600;
 }
 
 @font-face {
-    font-family: $bold-font;
-    src: url('../assets/fonts/AvenirNextLTProBold.ttf') format("truetype");
-    font-weight: 700;
-}
-
-// body
-body {
-    font-family: $regular-font;
-}
-
-// Remove this after coding
-div,
-main,
-section,
-header,
-footer {
-    border: 1px solid red;
+	font-family: $bold-font;
+	src: url("../assets/fonts/AvenirNextLTProBold.ttf") format("truetype"),
+		url("../assets/fonts/AvenirNextLTPro-Bold.otf") format("opentype");
+	font-weight: 700;
 }
 
 // Header
