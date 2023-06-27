@@ -4,6 +4,73 @@
   padding: 0;
 }
 
+.BackgroundHeader {
+  background-color: #323232;
+}
+
+.header {
+  color: #FAFAFA;
+  display: grid;
+  grid-template-areas: "logo" "menu";
+  justify-items: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    grid-template-areas: "logo menu menu menu";
+    justify-items: flex-start;
+    height: 8rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header {
+    grid-template-areas: "logo menu menu menu . . . ";
+    justify-items: flex-start;
+    height: 8rem;
+  }
+}
+.header__logo {
+  grid-area: logo;
+  font-size: 4rem;
+  font-weight: 300;
+  padding-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    padding-top: 0;
+  }
+}
+.header__menu {
+  color: #FAFAFA;
+  grid-area: menu;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  font-size: 2.4rem;
+}
+@media screen and (min-width: 768px) {
+  .header__menu {
+    width: auto;
+  }
+}
+.header__menu--li {
+  width: 100%;
+}
+.header__menu--li-item {
+  height: 7.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header__menu--li-item:hover, .header__menu--li-item:active {
+  border-bottom: 5px solid #AFAFAF;
+  color: #AFAFAF;
+  font-weight: 600;
+}
+
 .hero-banner {
   display: flex;
   background-image: url("../assets/images/hero-bio.jpg");
@@ -241,49 +308,6 @@
 .comment__div--bottom p {
   margin: 0;
   line-height: 1.75rem;
-}
-
-.show-hero-banner {
-  display: flex;
-  background-image: url("../assets/images/hero-shows.jpg");
-  align-items: center;
-  background-size: cover;
-  min-height: 30vh;
-}
-.show-hero-banner__title {
-  font-family: "Avenir Next Bold";
-  color: white;
-  font-size: 24px;
-  padding: 10px;
-}
-@media screen and (min-width: 1000px) {
-  .show-hero-banner__title {
-    font-size: 60px;
-    padding: 20px;
-  }
-}
-@media screen and (min-width: 1000px) and (min-width: 1000px) {
-  .show-hero-banner__title {
-    flex-direction: row;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-  .show-hero-banner__title img {
-    height: 20vh;
-    width: 75vw;
-    margin: 5px;
-  }
-}
-@media screen and (min-width: 1000px) and (min-width: 1000px) and (min-width: 1000px) {
-  .show-hero-banner__title img {
-    height: 200px;
-    width: 300px;
-  }
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
 }
 
 /*

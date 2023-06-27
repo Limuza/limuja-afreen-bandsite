@@ -1,6 +1,68 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
+
+.BackgroundHeader {
+  background-color: $primary-black;
+}
+.header {
+  color: $secondary-alabaster;
+  display: grid;
+  grid-template-areas: "logo" "menu";
+  justify-items: center;
+  align-items: center;
+  @include tablet {
+    grid-template-areas: "logo menu menu menu";
+    justify-items: flex-start;
+    height: 8rem;
+  }
+  @include desktop {
+    grid-template-areas: "logo menu menu menu . . . ";
+    justify-items: flex-start;
+    height: 8rem;
+  }
+  &__logo {
+    grid-area: logo;
+    font-size: 4rem;
+    font-weight: 300;
+    padding-top: 2rem;
+    @include tablet {
+      padding-top: 0;
+    }
+  }
+  &__menu {
+    color: $secondary-alabaster;
+    grid-area: menu;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    font-size: 2.4rem;
+    @include tablet {
+      width: auto;
+    }
+    &--li {
+      width: 100%;
+      &-item {
+        height: 7.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover,
+        &:active {
+          border-bottom: 5px solid $primary-silver;
+          color: $primary-silver;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+
+
 .hero-banner {
   display: flex;
   background-image: url("../assets/images/hero-bio.jpg");
