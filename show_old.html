@@ -1,49 +1,65 @@
-<!DOCTYPE html>
 
+
+
+
+
+
+<!DOCTYPE html>
+​
 <html lang="en">
+​
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles/show.css" />
+  <link rel="stylesheet" href="./styles/show.scss" />
   <link rel="stylesheet" href="./styles/global.css" />
   <title>Show</title>
 </head>
+​
 
 <body>
-  <!--Header-->
-  <header aria-label="Header">
-    <div class="logo">SHOWS</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Biography</a></li>
-        <li><a class="link--active" href="show.html">Shows</a></li>
+  <header class="BackgroundHeader">
+    <header class="header container">
+      <a href="./index.html" class="header__logo">BANDSITE</a>
+      <ul class="header__menu">
+        <li class="header__menu--li">
+          <div class="header__menu--li-item activeState">
+            <a href="./index.html">Biography</a>
+          </div>
+        </li>
+        <li class="header__menu--li">
+          <div class="header__menu--li-item">
+            <a href="./show.html">Shows</a>
+          </div>
+        </li>
       </ul>
-    </nav>
+    </header>
   </header>
-
+  ​
   <!-- Container -->
   <main>
     <!-- Hero Banner-->
     <section class="show-hero-banner">
-
+      ​
       <h2 class="show-hero-banner__title">Beautiful Beasts Album</h2>
-        <h1 class="show-hero-banner__title">Queen of Yellow x For The Stings
-          <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
-            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1253536813&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-            </iframe>
-            <div
-              style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
-              <a href="https://soundcloud.com/stephensanchezofficial" title="Stephen Sanchez" target="_blank"
-                style="color: #cccccc; text-decoration: none;">Stephen Sanchez</a> · <a
-                href="https://soundcloud.com/stephensanchezofficial/until-i-found-you-em-beihold"
-                title="Until I Found You (Em Beihold Version)" target="_blank"
-                style="color: #cccccc; text-decoration: none;">Until I Found You (Em Beihold Version)</a></div>
-                </h1>
-              </h2>
-                </section>
+      <h1 class="show-hero-banner__title">Queen of Yellow x For The Stings
+        <iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay"
+          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1253536813&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
+        </iframe>
+        <div
+          style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;">
+          <a href="https://soundcloud.com/stephensanchezofficial" title="Stephen Sanchez" target="_blank"
+            style="color: #cccccc; text-decoration: none;">Stephen Sanchez</a> · <a
+            href="https://soundcloud.com/stephensanchezofficial/until-i-found-you-em-beihold"
+            title="Until I Found You (Em Beihold Version)" target="_blank"
+            style="color: #cccccc; text-decoration: none;">Until I Found You (Em Beihold Version)</a>
+        </div>
+      </h1>
+      </h2>
     </section>
+
     <!-- About Us-->
     <section class="tickets">
       <div class="tickets-wrapper">
@@ -68,7 +84,7 @@
             <p class="tickets_show-info">San Francisco, CA</p>
             <button class="tickets_buy-button">Buy Tickets</button>
           </ul>
-
+          ​
           <ul class="tickets_show-list-item">
             <h3 class="tickets_show-heading">DATE</h3>
             <p class="tickets_show-date">Sun Sep 05 2021</p>
@@ -78,7 +94,7 @@
             <p class="tickets_show-info">San Francisco, CA</p>
             <button class="tickets_buy-button">Buy Tickets</button>
           </ul>
-
+          ​
           <ul class="tickets_show-list-item">
             <h3 class="tickets_show-heading">DATE</h3>
             <p class="tickets_show-date">Sun Sep 05 2021</p>
@@ -88,7 +104,7 @@
             <p class="tickets_show-info">San Francisco, CA</p>
             <button class="tickets_buy-button">Buy Tickets</button>
           </ul>
-
+          ​
           <ul class="tickets_show-list-item">
             <h3 class="tickets_show-heading">DATE</h3>
             <p class="tickets_show-date">Sun Sep 05 2021</p>
@@ -98,41 +114,17 @@
             <p class="tickets_show-info">San Francisco, CA</p>
             <button class="tickets_buy-button">Buy Tickets</button>
           </ul>
-
+          ​
         </ul>
       </div>
     </section>
-
-
-    <div class="flexbox-container">
-      <div>
-        <p class="about__content--left">DATE</p>
-        <p class="about__content--left">Mon Sept 06 2021</p>
-        <button type="ticket">BUY TICKETS</button>
-      </div>
-
-
-      <div>2
-
-        <button type="ticket">BUY TICKETS</button>
-      </div>
-
-
-      <div>3
-
-        <button type="ticket">BUY TICKETS</button>
-      </div>
-
-    </div>
-
-    </section>
-
-
+    ​
+    ​
 
     <!-- Comment-->
     <section class="comment"></section>
   </main>
-
+  ​
   <!-- Footer -->
   <footer class="footer">
     <!-- Title-->
@@ -147,5 +139,6 @@
     <section class="footer__copyright">Copyright section</section>
   </footer>
 </body>
+​
 
 </html>
