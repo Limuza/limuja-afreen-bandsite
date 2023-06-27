@@ -66,8 +66,8 @@
   justify-content: center;
 }
 .header__menu--li-item:hover, .header__menu--li-item:active {
-  border-bottom: 5px solid #AFAFAF;
-  color: #AFAFAF;
+  border-bottom: 5px solid #323232;
+  color: #323232;
   font-weight: 600;
 }
 
