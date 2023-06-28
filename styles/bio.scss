@@ -54,7 +54,6 @@ nav {
 //         color: $primary-black;
 //         font-weight: 100;
 //       }
-    
 
 .hero-banner {
   display: flex;
@@ -87,7 +86,6 @@ nav {
     height: 20vh;
     width: 75vw;
     &-caption {
-      
       font-family: $bold-font;
     }
   }
@@ -112,7 +110,7 @@ nav {
   padding: 10px;
   font-family: $bold-font;
   font-size: 24px;
-  
+
   &__title {
     font-family: $bold-font;
     font-size: 24px;

@@ -1,10 +1,8 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-
 .header {
   background-color: $primary-black;
-
 }
 .logo {
   color: $secondary-alabaster;
@@ -13,11 +11,10 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  
+
   @include tablet {
     grid-template-areas: "logo menu menu menu";
     justify-items: auto;
-
   }
   @include desktop {
     grid-template-areas: "logo menu menu menu . . . ";
@@ -32,65 +29,58 @@
     width: 300px;
     height: 300px;
     white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  
-             }
-    @include tablet {
-      width: auto;
-    }
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
-
+  @include tablet {
+    width: auto;
+  }
+}
 
 .show-hero-banner__title {
   align-self: self-start;
-  
 }
-  // &__menu {
-  //   color: $secondary-alabaster;
-  //   grid-area: menu;
-  //   width: 100%;
-  // ;
-  //   grid-template-columns: 1fr 1fr;
-  //   gap: 2rem;
-  //   justify-items: center;
-  //   align-items: center;
-  //   font-size: 2.4rem;
-  //   @include tablet {
-  //     width: auto;
-  //   }
-  //   &--li {
-  //     width: 100%;
-  //     &-item {
-  //       height: 7.5rem;
-  //       display: flex;
-  //       align-items: center;
-  //       justify-content: center;
-  //       &:hover,
-  //       &:active {
-  //         border-bottom: 5px solid $primary-silver;
-  //         color: $primary-silver;
-  //         font-weight: 600;
-  //       }
-  //     }
-  //   }
-  // }
-
-
-
-
+// &__menu {
+//   color: $secondary-alabaster;
+//   grid-area: menu;
+//   width: 100%;
+// ;
+//   grid-template-columns: 1fr 1fr;
+//   gap: 2rem;
+//   justify-items: center;
+//   align-items: center;
+//   font-size: 2.4rem;
+//   @include tablet {
+//     width: auto;
+//   }
+//   &--li {
+//     width: 100%;
+//     &-item {
+//       height: 7.5rem;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+//       &:hover,
+//       &:active {
+//         border-bottom: 5px solid $primary-silver;
+//         color: $primary-silver;
+//         font-weight: 600;
+//       }
+//     }
+//   }
+// }
 
 .show-hero-banner {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   background-image: url("../assets/images/hero-shows.jpg");
-  align-items:center;
+  align-items: center;
   background-size: cover;
   min-height: 30vh;
   &__title {
     font-family: $bold-font;
     color: $primary-white;
-    font-size: 24px;
+    font-size: 35px;
     padding: 10px;
     @media screen and (min-width: $desktop-width) {
       font-size: 60px;
@@ -112,9 +102,6 @@
     }
   }
 }
-
-
-
 
 .footer {
   display: flex;
@@ -142,26 +129,27 @@
   }
 }
 
+
+
 .tickets {
   display: flex;
   justify-content: left;
   flex-direction: column;
   align-items: center;
   padding: 20px;
- 
-  
+
   @media screen and (min-width: $desktop-width) {
-      flex-direction: column;
-      flex-wrap: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
   @media screen and (min-width: $tablet-width) {
     flex-direction: column;
     flex-wrap: wrap;
-}
+  }
   &__title {
     font-weight: 100;
   }
-  
+
   &__ul {
     align-items: center;
   }
@@ -178,24 +166,25 @@
   .tickets_buy-button {
     background-color: $secondary-darkblack;
     justify-content: center;
-  width: 350px;
-  height: 70px;
-  border-radius: 15px;
-  color: $primary-white;
-  font-family: $bold-font;
-  font-size:medium;
-  
-  @media screen and (min-width: $desktop-width) {
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-@media screen and (min-width: $tablet-width) {
-  flex-direction: column;
-  flex-wrap: wrap;
-}}
+    width: 350px;
+    height: 70px;
+    border-radius: 15px;
+    color: $primary-white;
+    font-family: $bold-font;
+    font-size: medium;
+
+    @media screen and (min-width: $desktop-width) {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+    @media screen and (min-width: $tablet-width) {
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
 
   .button {
-    font-family: $bold-font
+    font-family: $bold-font;
   }
 
   &__img {
@@ -211,8 +200,7 @@
     &--left {
       margin-bottom: 10px;
     }
-  
-    
+
     @media screen and (min-width: $desktop-width) {
       flex-direction: row;
       &--left {
@@ -224,7 +212,6 @@
       &--left {
         margin-bottom: 0px;
       }
-
     }
   }
 }
