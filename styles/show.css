@@ -89,11 +89,60 @@
   }
 }
 
-.tickets {
+.footer {
   display: flex;
   flex-direction: column;
-  align-items: right;
+  margin: 1.25rem;
+  justify-content: first baseline;
+  border-radius: 5px;
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 5%;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    width: 30vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    width: 30vw;
+  }
+}
+
+.tickets {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  align-items: center;
   padding: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .tickets {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tickets {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+.tickets__title {
+  font-weight: 100;
+}
+.tickets__ul {
+  align-items: center;
 }
 .tickets .tickets_show-date {
   font-family: "Avenir Next Bold";
@@ -104,12 +153,25 @@
 }
 .tickets .tickets_buy-button {
   background-color: #000000;
+  justify-content: center;
   width: 350px;
   height: 70px;
   border-radius: 15px;
   color: #FFFFFF;
   font-family: "Avenir Next Bold";
   font-size: medium;
+}
+@media screen and (min-width: 1280px) {
+  .tickets .tickets_buy-button {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .tickets .tickets_buy-button {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
 .tickets .button {
   font-family: "Avenir Next Bold";
@@ -143,9 +205,4 @@
   .tickets__content--left {
     margin-bottom: 0px;
   }
-}
-
-.flex-container {
-  display: flex;
-  flex-direction: column;
 }/*# sourceMappingURL=show.css.map */

@@ -59,6 +59,7 @@ header nav ul li a {
 .footer {
   height: 70vh;
   width: auto;
+  background-color: #323232;
 }
 
 .footer__address {
@@ -69,6 +70,7 @@ header nav ul li a {
 .footer__address .footer {
   display: flex;
   flex-direction: column;
+  background-color: #323232;
 }
 @media screen and (min-width: 1280px) {
   .footer__address .footer {
