@@ -27,10 +27,18 @@ header nav ul {
   list-style-type: none;
   font-size: 30px;
   text-align: justify;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #323232;
+  margin-bottom: 0;
 }
 header nav ul li {
-  border: 1px solid #323232;
-  display: inline-block;
+  border: 1px solid red;
+  width: 50%;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
 }
 header nav ul li a {
   color: #FFFFFF;

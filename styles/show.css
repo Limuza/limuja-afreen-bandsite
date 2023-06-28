@@ -46,10 +46,6 @@
   }
 }
 
-.show-hero-banner__title {
-  align-self: self-start;
-}
-
 .show-hero-banner {
   display: flex;
   flex-direction: column;

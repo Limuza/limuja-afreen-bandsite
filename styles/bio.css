@@ -32,7 +32,7 @@
   }
 }
 
-nav {
+.nav {
   background-color: #323232;
   color: #FAFAFA;
   display: flex;
@@ -41,7 +41,7 @@ nav {
   font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
-  nav {
+  .nav {
     width: auto;
   }
 }

@@ -41,14 +41,22 @@ header {
             list-style-type: none;
             font-size: 30px;
             text-align: justify;
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $primary-black;
+            margin-bottom: 0;
             & li {
-                border: 1px solid $primary-black;
-                display: inline-block;
+                border: 1px solid red;
+                // display: inline-block;
+                width: 50%;
+                line-height: 50px;
+               display: flex;
+               justify-content: center;
                 & a {
                     color: $primary-white;
                     text-decoration: none;
-                   
+                
 
                 }
                
