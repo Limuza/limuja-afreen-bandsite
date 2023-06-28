@@ -4,71 +4,46 @@
   padding: 0;
 }
 
-.BackgroundHeader {
+.header {
+  background-color: #323232;
+}
+.header .nav {
   background-color: #323232;
 }
 
-.header {
+.logo {
   color: #FAFAFA;
-  display: grid;
-  grid-template-areas: "logo" "menu";
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-items: center;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .header {
+  .logo {
     grid-template-areas: "logo menu menu menu";
-    justify-items: flex-start;
-    height: 8rem;
+    justify-items: auto;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header {
+  .logo {
     grid-template-areas: "logo menu menu menu . . . ";
-    justify-items: flex-start;
-    height: 8rem;
+    justify-items: auto;
   }
 }
-.header__logo {
-  grid-area: logo;
-  font-size: 4rem;
-  font-weight: 300;
-  padding-top: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .header__logo {
-    padding-top: 0;
-  }
-}
-.header__menu {
+
+nav {
+  background-color: #323232;
   color: #FAFAFA;
-  grid-area: menu;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  justify-items: center;
-  align-items: center;
-  font-size: 2.4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1rem;
 }
 @media screen and (min-width: 768px) {
-  .header__menu {
+  nav {
     width: auto;
   }
-}
-.header__menu--li {
-  width: 100%;
-}
-.header__menu--li-item {
-  height: 7.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header__menu--li-item:hover, .header__menu--li-item:active {
-  border-bottom: 5px solid #323232;
-  color: #323232;
-  font-weight: 600;
 }
 
 .hero-banner {
@@ -104,10 +79,10 @@
 }
 .about__img {
   height: 20vh;
-  width: auto;
+  width: 75vw;
 }
 .about__img-caption {
-  font-style: italic;
+  font-family: "Avenir Next Bold";
 }
 .about__content {
   display: flex;
@@ -129,6 +104,8 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+  font-family: "Avenir Next Bold";
+  font-size: 24px;
 }
 .gallery__title {
   font-family: "Avenir Next Bold";
@@ -216,13 +193,13 @@
   padding: 0 0 0.25rem 0;
   font-family: "AvenirNextLTPro-Demi";
   font-size: 0.85rem;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 .join-info__name-form {
   height: 2rem;
   width: 75vw;
   margin: 0 0 1.5rem 0;
-  border: solid 1.5px #E1E1E1;
+  border: solid 1.5px #e1e1e1;
   border-radius: 4px;
   background-color: white;
   font-family: "AvenirNextLTPro-Regular";
@@ -233,11 +210,11 @@
   padding: 0 0 0.25rem 0;
   font-family: "AvenirNextLTPro-Demi";
   font-size: 0.85rem;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 .join-info__text-form {
   height: 5rem;
-  border: solid 1.5px #E1E1E1;
+  border: solid 1.5px #e1e1e1;
   border-radius: 4px;
   background-color: white;
   font-family: "AvenirNextLTPro-Regular";
@@ -287,7 +264,7 @@
 .comment__card-date {
   margin: 0;
   font-size: 1rem;
-  color: #AFAFAF;
+  color: #afafaf;
 }
 .comment__div--left {
   display: flex;
@@ -314,17 +291,28 @@
   display: flex;
   flex-direction: column;
   margin: 1.25rem;
-  justify-content: center;
+  justify-content: first baseline;
   border-radius: 5px;
   background-color: #323232;
+  color: #FFFFFF;
+  padding: 5%;
+  font-weight: bold;
 }
 @media screen and (min-width: 768px) {
   .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
     width: 30vw;
   }
 }
 @media screen and (min-width: 1280px) {
   .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
     width: 30vw;
   }
 }

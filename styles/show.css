@@ -4,76 +4,55 @@
   padding: 0;
 }
 
-.BackgroundHeader {
+.header {
   background-color: #323232;
 }
 
-.header {
+.logo {
   color: #FAFAFA;
-  display: grid;
-  grid-template-areas: "logo" "menu";
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
 }
 @media screen and (min-width: 768px) {
-  .header {
+  .logo {
     grid-template-areas: "logo menu menu menu";
-    justify-items: flex-start;
-    height: 8rem;
+    justify-items: auto;
   }
 }
 @media screen and (min-width: 1280px) {
-  .header {
+  .logo {
     grid-template-areas: "logo menu menu menu . . . ";
-    justify-items: flex-start;
-    height: 8rem;
+    justify-items: auto;
   }
 }
-.header__logo {
-  grid-area: logo;
-  font-size: 4rem;
-  font-weight: 300;
-  padding-top: 2rem;
-}
-@media screen and (min-width: 768px) {
-  .header__logo {
-    padding-top: 0;
-  }
-}
-.header__menu {
+.logo .nav {
+  background-color: #323232;
   color: #FAFAFA;
-  grid-area: menu;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  justify-items: center;
-  align-items: center;
-  font-size: 2.4rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 300px;
+  height: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media screen and (min-width: 768px) {
-  .header__menu {
+  .logo {
     width: auto;
   }
 }
-.header__menu--li {
-  width: 100%;
-}
-.header__menu--li-item {
-  height: 7.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.header__menu--li-item:hover, .header__menu--li-item:active {
-  border-bottom: 5px solid #AFAFAF;
-  color: #AFAFAF;
-  font-weight: 600;
+
+.show-hero-banner__title {
+  align-self: self-start;
 }
 
 .show-hero-banner {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   background-image: url("../assets/images/hero-shows.jpg");
   align-items: center;
   background-size: cover;
@@ -113,10 +92,27 @@
 .tickets {
   display: flex;
   flex-direction: column;
+  align-items: right;
   padding: 20px;
+}
+.tickets .tickets_show-date {
+  font-family: "Avenir Next Bold";
 }
 .tickets h3 {
   color: #AFAFAF;
+  font-size: small;
+}
+.tickets .tickets_buy-button {
+  background-color: #000000;
+  width: 350px;
+  height: 70px;
+  border-radius: 15px;
+  color: #FFFFFF;
+  font-family: "Avenir Next Bold";
+  font-size: medium;
+}
+.tickets .button {
+  font-family: "Avenir Next Bold";
 }
 .tickets__img {
   height: 20vh;

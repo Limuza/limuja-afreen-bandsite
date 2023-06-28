@@ -1,70 +1,64 @@
 @use "./partials/variables" as *;
 @use "./partials/mixins" as *;
 
-
-.BackgroundHeader {
-  background-color: $primary-black;
-}
 .header {
+  background-color: $primary-black;
+
+  .nav {
+    background-color: $primary-black;
+  }
+}
+
+.logo {
   color: $secondary-alabaster;
-  display: grid;
-  grid-template-areas: "logo" "menu";
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   justify-items: center;
   align-items: center;
   @include tablet {
     grid-template-areas: "logo menu menu menu";
-    justify-items: flex-start;
-    height: 8rem;
+    justify-items: auto;
   }
   @include desktop {
     grid-template-areas: "logo menu menu menu . . . ";
-    justify-items: flex-start;
-    height: 8rem;
-  }
-  &__logo {
-    grid-area: logo;
-    font-size: 4rem;
-    font-weight: 300;
-    padding-top: 2rem;
-    @include tablet {
-      padding-top: 0;
-    }
-  }
-  &__menu {
-    color: $secondary-alabaster;
-    grid-area: menu;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    justify-items: center;
-    align-items: center;
-    font-size: 2.4rem;
-    @include tablet {
-      width: auto;
-    }
-    &--li {
-      width: 100%;
-      &-item {
-        height: 7.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &:hover,
-        &:active {
-          border-bottom: 5px solid $primary-black;
-          color: $primary-black;
-          font-weight: 600;
-        }
-      }
-    }
+    justify-items: auto;
   }
 }
 
+nav {
+  background-color: $primary-black;
+  color: $secondary-alabaster;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
+  font-size: 1rem;
+  @include tablet {
+    width: auto;
+  }
+}
+// .flex-container {
+//   width: auto;
+//   &-item {
+//     display: flex;
+//     &__div {
+//       flex-basis: 200px;
+//       flex-direction: row;
+
+//       align-items: center;
+//       justify-content: center;
+//       &:hover,
+//       &:active {
+//         border-bottom: 5px solid $primary-black;
+//         color: $primary-black;
+//         font-weight: 100;
+//       }
+    
 
 .hero-banner {
   display: flex;
+
   background-image: url("../assets/images/hero-bio.jpg");
   align-items: center;
   background-size: cover;
@@ -78,9 +72,9 @@
       font-size: 60px;
       padding: 20px;
     }
-      @media screen and (min-width: $tablet-width) {
-        font-size: 60px;
-        padding: 20px;
+    @media screen and (min-width: $tablet-width) {
+      font-size: 60px;
+      padding: 20px;
     }
   }
 }
@@ -91,9 +85,10 @@
   padding: 20px;
   &__img {
     height: 20vh;
-    width: auto;
+    width: 75vw;
     &-caption {
-      font-style: italic;
+      
+      font-family: $bold-font;
     }
   }
   &__content {
@@ -115,6 +110,9 @@
   display: flex;
   flex-direction: column;
   padding: 10px;
+  font-family: $bold-font;
+  font-size: 24px;
+  
   &__title {
     font-family: $bold-font;
     font-size: 24px;
@@ -160,96 +158,94 @@
   margin: 0;
   font-family: $regular-font;
   padding: 0 1rem 0 1rem;
-  
+
   &__date {
-      display: none;
+    display: none;
   }
 
   &__title {
-      margin:0;
-      padding: 1.5rem 0 1.125rem 0rem;
-      font-family: 'AvenirNextLTPro-Demi';
-      font-size: 2rem; 
+    margin: 0;
+    padding: 1.5rem 0 1.125rem 0rem;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 2rem;
   }
 
   &__ul {
-      list-style: none;
-      padding:0;
-      margin:0;
-      display: flex;
-      justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start;
   }
 
   &__img {
-      height: 2.5rem;
-      margin: 1rem 0 0 0;
-      border-radius: 50%;
-     
+    height: 2.5rem;
+    margin: 1rem 0 0 0;
+    border-radius: 50%;
   }
 
   &__div--left {
-      display: flex;
-      flex-direction: column;
-      padding: 0 1rem 0 0 
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 0 0;
   }
 
   &__div--right {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
 
   &__name {
-      text-transform: uppercase;
-      padding: 0 0 0.25rem 0;
-      font-family: 'AvenirNextLTPro-Demi';
-      font-size: 0.85rem;
-      color: #AFAFAF;
+    text-transform: uppercase;
+    padding: 0 0 0.25rem 0;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 0.85rem;
+    color: #afafaf;
   }
 
   &__name-form {
-      height: 2rem;
-      width: 75vw;
-      margin:0 0 1.5rem 0;
-      border: solid 1.5px #E1E1E1;
-      border-radius: 4px;
-      background-color: white;
-      font-family: 'AvenirNextLTPro-Regular';
-      padding:0.5rem;
+    height: 2rem;
+    width: 75vw;
+    margin: 0 0 1.5rem 0;
+    border: solid 1.5px #e1e1e1;
+    border-radius: 4px;
+    background-color: white;
+    font-family: "AvenirNextLTPro-Regular";
+    padding: 0.5rem;
   }
 
   &__text {
-      text-transform: uppercase;
-      padding: 0 0 0.25rem 0;
-      font-family: 'AvenirNextLTPro-Demi';
-      font-size: 0.85rem;
-      color: #AFAFAF;
+    text-transform: uppercase;
+    padding: 0 0 0.25rem 0;
+    font-family: "AvenirNextLTPro-Demi";
+    font-size: 0.85rem;
+    color: #afafaf;
   }
 
   &__text-form {
-      height: 5rem;
-      border: solid 1.5px #E1E1E1;
-      border-radius: 4px;
-      background-color: white;
-      font-family: 'AvenirNextLTPro-Regular';
-      padding:0.5rem;
+    height: 5rem;
+    border: solid 1.5px #e1e1e1;
+    border-radius: 4px;
+    background-color: white;
+    font-family: "AvenirNextLTPro-Regular";
+    padding: 0.5rem;
   }
 
   &__button {
-      display: flex;
-      justify-content: center;
-      height: auto;
-      width: 9.375rem; //150px
-      padding: 0.75rem;
-      font-size: 1rem;
-      background-color: #323232;
-      font-family: 'AvenirNextLTPro-Demi';
-      color: white;
-      text-transform: uppercase;
-      border-radius: 4px;
-      border: none;
+    display: flex;
+    justify-content: center;
+    height: auto;
+    width: 9.375rem; //150px
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: #323232;
+    font-family: "AvenirNextLTPro-Demi";
+    color: white;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: none;
   }
 
-  
   @media screen and (min-width: $desktop-width) {
     padding-left: 150px;
     padding-right: 150px;
@@ -258,60 +254,57 @@
     padding-left: 150px;
     padding-right: 150px;
   }
-
 }
 
 //Comment
 .comment {
-
   &__card {
-      display: flex;
-      padding: 1rem 0;
+    display: flex;
+    padding: 1rem 0;
   }
 
   &__card-img {
-      height: 2.5rem;
-      padding: 0;
-      border-radius: 50%; 
+    height: 2.5rem;
+    padding: 0;
+    border-radius: 50%;
   }
 
   &__card-name {
-      margin: 0;
-      font-family: 'AvenirNextLTPro-Demi';
-      color: #323232;
+    margin: 0;
+    font-family: "AvenirNextLTPro-Demi";
+    color: #323232;
   }
 
   &__card-date {
-      margin: 0;
-      font-size: 1rem;
-      color: #AFAFAF;
+    margin: 0;
+    font-size: 1rem;
+    color: #afafaf;
   }
 
   &__div--left {
-      display: flex;
-      padding-right: 1rem;
+    display: flex;
+    padding-right: 1rem;
   }
 
   &__div--right {
-      display: flex;
-      flex-direction: column;
-      margin-right: 1rem;
-      width:55vw;
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    width: 55vw;
   }
 
   &__div--middle {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      padding: 0 0 1rem 0rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 0 1rem 0rem;
   }
-  
-  &__div--bottom {
 
-      p {
-          margin: 0;
-          line-height: 1.75rem;
-      }
+  &__div--bottom {
+    p {
+      margin: 0;
+      line-height: 1.75rem;
+    }
   }
 }
 
@@ -319,10 +312,12 @@
   display: flex;
   flex-direction: column;
   margin: 1.25rem;
-  justify-content: center;
+  justify-content: first baseline;
   border-radius: 5px;
   background-color: $primary-black;
-  h3: $primary-white
+  color: $primary-white;
+  padding: 5%;
+  font-weight: bold;
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
@@ -331,10 +326,10 @@
     width: 30vw;
   }
   @include desktop {
-     flex-direction: row;
-     flex-wrap: wrap;
-     justify-content: space-evenly;
-     align-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-evenly;
     width: 30vw;
   }
 }

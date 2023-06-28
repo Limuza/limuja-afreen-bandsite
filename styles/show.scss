@@ -2,64 +2,79 @@
 @use "./partials/mixins" as *;
 
 
-.BackgroundHeader {
-  background-color: $primary-black;
-}
 .header {
+  background-color: $primary-black;
+
+}
+.logo {
   color: $secondary-alabaster;
-  display: grid;
-  grid-template-areas: "logo" "menu";
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-items: center;
   align-items: center;
+  
   @include tablet {
     grid-template-areas: "logo menu menu menu";
-    justify-items: flex-start;
-    height: 8rem;
+    justify-items: auto;
+
   }
   @include desktop {
     grid-template-areas: "logo menu menu menu . . . ";
-    justify-items: flex-start;
-    height: 8rem;
+    justify-items: auto;
   }
-  &__logo {
-    grid-area: logo;
-    font-size: 4rem;
-    font-weight: 300;
-    padding-top: 2rem;
-    @include tablet {
-      padding-top: 0;
-    }
-  }
-  &__menu {
+  .nav {
+    background-color: $primary-black;
     color: $secondary-alabaster;
-    grid-area: menu;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    justify-items: center;
-    align-items: center;
-    font-size: 2.4rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 300px;
+    white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+             }
     @include tablet {
       width: auto;
     }
-    &--li {
-      width: 100%;
-      &-item {
-        height: 7.5rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &:hover,
-        &:active {
-          border-bottom: 5px solid $primary-silver;
-          color: $primary-silver;
-          font-weight: 600;
-        }
-      }
-    }
   }
+
+
+.show-hero-banner__title {
+  align-self: self-start;
+  
 }
+  // &__menu {
+  //   color: $secondary-alabaster;
+  //   grid-area: menu;
+  //   width: 100%;
+  // ;
+  //   grid-template-columns: 1fr 1fr;
+  //   gap: 2rem;
+  //   justify-items: center;
+  //   align-items: center;
+  //   font-size: 2.4rem;
+  //   @include tablet {
+  //     width: auto;
+  //   }
+  //   &--li {
+  //     width: 100%;
+  //     &-item {
+  //       height: 7.5rem;
+  //       display: flex;
+  //       align-items: center;
+  //       justify-content: center;
+  //       &:hover,
+  //       &:active {
+  //         border-bottom: 5px solid $primary-silver;
+  //         color: $primary-silver;
+  //         font-weight: 600;
+  //       }
+  //     }
+  //   }
+  // }
 
 
 
@@ -67,7 +82,7 @@
 
 .show-hero-banner {
   display: flex;
-  flex-direction: row;
+  flex-direction:column;
   background-image: url("../assets/images/hero-shows.jpg");
   align-items:center;
   background-size: cover;
@@ -103,10 +118,34 @@
 .tickets {
   display: flex;
   flex-direction: column;
+  align-items: right;
   padding: 20px;
-  h3 {
-    color: $primary-silver
+  
+
+  .tickets_show-date {
+    font-family: $bold-font;
   }
+
+  h3 {
+    color: $primary-silver;
+    font-size: small;
+  }
+
+  .tickets_buy-button {
+    background-color: $secondary-darkblack;
+  width: 350px;
+  height: 70px;
+  border-radius: 15px;
+  color: $primary-white;
+  font-family: $bold-font;
+  font-size:medium;
+  
+  }
+
+  .button {
+    font-family: $bold-font
+  }
+
   &__img {
     height: 20vh;
     width: auto;
@@ -120,6 +159,7 @@
     &--left {
       margin-bottom: 10px;
     }
+  
     
     @media screen and (min-width: $desktop-width) {
       flex-direction: row;

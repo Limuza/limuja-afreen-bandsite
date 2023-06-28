@@ -18,7 +18,6 @@ body {
 }
 
 header {
-  height: 10vh;
   display: flex;
   flex-direction: column;
   background-color: #323232;
@@ -26,6 +25,8 @@ header {
 }
 header nav ul {
   list-style-type: none;
+  font-size: 30px;
+  text-align: justify;
 }
 header nav ul li {
   border: 1px solid #323232;
@@ -35,12 +36,12 @@ header nav ul li a {
   color: #FFFFFF;
   text-decoration: none;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1280px) {
   header .logo {
     width: 30vw;
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
   header {
     flex-direction: row;
   }
@@ -55,58 +56,68 @@ header nav ul li a {
   flex-direction: column;
 }
 
-footer {
+.footer {
   height: 70vh;
+  width: auto;
 }
 
-.footer {
+.footer__address {
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 0 0 1rem 0rem;
+}
+.footer__address .footer {
   display: flex;
   flex-direction: column;
 }
-@media screen and (min-width: 1000px) {
-  .footer {
+@media screen and (min-width: 1280px) {
+  .footer__address .footer {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
-.footer__title {
+.footer__address .footer__title {
   order: 1;
 }
 @media screen and (min-width: 1000px) {
-  .footer__title {
+  .footer__address .footer__title {
     width: 30%;
     display: inline-block;
+    padding-bottom: 2%;
+    font-family: "Avenir Next Bold";
   }
 }
-.footer__socials {
+.footer__address .footer__socials {
   order: 2;
 }
-@media screen and (min-width: 1000px) {
-  .footer__socials {
+@media screen and (min-width: 1280px) {
+  .footer__address .footer__socials {
     width: 20%;
     display: inline-block;
+    padding-bottom: 2%;
   }
 }
-.footer__address {
+.footer__address .footer__address {
   order: 3;
 }
-@media screen and (min-width: 1000px) {
-  .footer__address {
+@media screen and (min-width: 1280px) {
+  .footer__address .footer__address {
     order: 4;
     width: 100%;
+    padding-inline: 10%;
   }
 }
-.footer__logo {
+.footer__address__logo {
   order: 4;
 }
-@media screen and (min-width: 1000px) {
-  .footer__logo {
+@media screen and (min-width: 1280px) {
+  .footer__address__logo {
     order: 3;
     width: 40%;
     display: inline-block;
   }
 }
-.footer__copyright {
+.footer__address__copyright {
   order: 5;
   width: 100%;
 }/*# sourceMappingURL=global.css.map */
