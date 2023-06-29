@@ -10,12 +10,16 @@
 }
 
 .logo {
-  color: $secondary-alabaster;
+  color: $primary-silver;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-items: center;
   align-items: center;
+  padding-left: 2cm;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   @include tablet {
     grid-template-areas: "logo menu menu menu";
     justify-items: auto;
@@ -32,28 +36,15 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   font-size: 1rem;
   @include tablet {
     width: auto;
   }
 }
-// .flex-container {
-//   width: auto;
-//   &-item {
-//     display: flex;
-//     &__div {
-//       flex-basis: 200px;
-//       flex-direction: row;
-
-//       align-items: center;
-//       justify-content: center;
-//       &:hover,
-//       &:active {
-//         border-bottom: 5px solid $primary-black;
-//         color: $primary-black;
-//         font-weight: 100;
-//       }
 
 .hero-banner {
   display: flex;
@@ -107,12 +98,12 @@
 .gallery {
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  font-family: $bold-font;
-  font-size: 24px;
+  padding: 0px;
+  font-size: 20px;
+  background-color: $secondary-alabaster;
 
   &__title {
-    font-family: $bold-font;
+    font-family: $demi-font;
     font-size: 24px;
   }
   &__image-container {
@@ -125,9 +116,9 @@
       align-items: center;
 
       & img {
-        height: 20vh;
-        width: 75vw;
-        margin: 5px;
+        height: 25vh;
+        width: 85vw;
+        margin: 10px;
         @media screen and (min-width: $desktop-width) {
           height: 200px;
           width: 300px;
@@ -140,20 +131,21 @@
       }
       @media screen and (min-width: $desktop-width) {
         flex-direction: row;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 50px;
+        margin-right: 50px;
       }
       @media screen and (min-width: $tablet-width) {
         flex-direction: row;
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 50px;
+        margin-right: 50px;
       }
     }
   }
 }
 
+
 .join-info {
-  margin: 0;
+  margin-right: 20px;
   font-family: $regular-font;
   padding: 0 1rem 0 1rem;
 
@@ -162,16 +154,16 @@
   }
 
   &__title {
-    margin: 0;
+   
     padding: 1.5rem 0 1.125rem 0rem;
-    font-family: "AvenirNextLTPro-Demi";
+    font-family: $pro-demi;
     font-size: 2rem;
   }
 
   &__ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+
     display: flex;
     justify-content: flex-start;
   }
@@ -196,36 +188,36 @@
   &__name {
     text-transform: uppercase;
     padding: 0 0 0.25rem 0;
-    font-family: "AvenirNextLTPro-Demi";
+    font-family: $pro-demi;
     font-size: 0.85rem;
-    color: #afafaf;
+    color: $primary-silver;
   }
 
   &__name-form {
     height: 2rem;
-    width: 75vw;
+    width: 65vw;
     margin: 0 0 1.5rem 0;
-    border: solid 1.5px #e1e1e1;
+    border: solid 1.5px $secondary-mercury;
     border-radius: 4px;
     background-color: white;
-    font-family: "AvenirNextLTPro-Regular";
+    font-family: $regular-font;
     padding: 0.5rem;
   }
 
   &__text {
     text-transform: uppercase;
     padding: 0 0 0.25rem 0;
-    font-family: "AvenirNextLTPro-Demi";
+    font-family: $pro-demi;
     font-size: 0.85rem;
-    color: #afafaf;
+    color:$primary-silver;
   }
 
   &__text-form {
     height: 5rem;
-    border: solid 1.5px #e1e1e1;
+    border: solid 1.5px $secondary-mercury;
     border-radius: 4px;
-    background-color: white;
-    font-family: "AvenirNextLTPro-Regular";
+    background-color: $primary-white;
+    font-family: $regular-font;
     padding: 0.5rem;
   }
 
@@ -236,9 +228,9 @@
     width: 9.375rem; //150px
     padding: 0.75rem;
     font-size: 1rem;
-    background-color: #323232;
-    font-family: "AvenirNextLTPro-Demi";
-    color: white;
+    background-color: $primary-black;
+    font-family: $pro-demi;
+    color: $primary-white;
     text-transform: uppercase;
     border-radius: 4px;
     border: none;
@@ -269,14 +261,14 @@
 
   &__card-name {
     margin: 0;
-    font-family: "AvenirNextLTPro-Demi";
-    color: #323232;
+    font-family: $pro-demi;
+    color: $primary-black;
   }
 
   &__card-date {
     margin: 0;
     font-size: 1rem;
-    color: #afafaf;
+    color: $primary-silver;
   }
 
   &__div--left {
@@ -314,7 +306,7 @@
   border-radius: 5px;
   background-color: $primary-black;
   color: $primary-white;
-  padding: 5%;
+  padding: 2%;
   font-weight: bold;
   @include tablet {
     flex-direction: row;
@@ -332,210 +324,3 @@
   }
 }
 
-/*
-.nav {
-  background-color: $primary-black;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100vw;
-  height: 3.125em;
-  margin: 1rem;
-  &__logo {
-    padding: 0.625rem;
-    flex-direction: column;
-    justify-content: left;
-  }
-
-  &__firstbox {
-    line-height: 1.75rem;
-    padding: 0.625rem;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
-
-.button {
-  background-color: $secondary-darkblack;
-  color: $primary-white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-
-  &:hover {
-    background-color: darken($secondary-mercury, 10%);
-  }
-}
-
-.div {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  box-sizing: border-box;
-  border-radius: 0%;
-  width: auto;
-  height: auto;
-  margin: auto;
-}
-
-.flowers {
-  display: flex;
-  flex-direction: column;
-  margin: 1.25rem;
-  justify-content: center;
-  border-radius: 5px;
-  @include tablet {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
-    width: 30vw;
-  }
-  @include desktop {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
-    width: 30vw;
-  }
-  &__img {
-    text-align: center;
-    padding: 10px 0;
-    & img {
-      width: 100px;
-      height: 100px;
-    }
-    @include tablet {
-    }
-
-    @include desktop {
-    }
-  }
-}
-
-.firstbox {
-  margin-top: -40px;
-  margin-right: 30px;
-  margin-bottom: 40px;
-  margin-left: 4em;
-  background-size: cover;
-  width: 400px;
-  height: 200px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: last baseline;
-}
-text.flexbox {
-  font-size: 36px;
-  line-height: 44px;
-  font-weight: 700;
-  color: white;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  margin: 1.25rem;
-  justify-content: center;
-  border-radius: 5px;
-  @include tablet {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
-    width: 30vw;
-  }
-  @include desktop {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
-    width: 30vw;
-  }
-}
-
-h1 {
-  color: $primary-black;
-}
-
-.box {
-  color: black;
-}
-
-h3 {
-  color: black;
-}
-
-.bees p {
-  color: #000000;
-}
-
-p,
-ul {
-  border: 2px;
-  padding: 0.5em;
-}
-
-.photogallery {
-  display: flex;
-  flex-direction: column;
-  margin: 1.25rem;
-  justify-content: center;
-  border-radius: 5px;
-  @include tablet {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
-    width: 30vw;
-  }
-  @include desktop {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
-    width: 30vw;
-  }
-  &__img {
-    text-align: center;
-    padding: 10px 0;
-    & img {
-      width: 100px;
-      height: 100px;
-      display: flex;
-      flex-wrap: wrap;
-      border-top: 100px;
-      border-bottom: 100px;
-    }
-    @include tablet {
-    }
-
-    @include desktop {
-    }
-  }
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  margin: 1.25rem;
-  justify-content: center;
-  border-radius: 5px;
-  @include tablet {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
-    width: 30vw;
-  }
-  @include desktop {
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: space-evenly;
-    // align-content: space-evenly;
-    width: 30vw;
-  }
-}
-*/

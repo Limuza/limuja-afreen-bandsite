@@ -19,6 +19,7 @@ body {
 
 header {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   background-color: #323232;
   color: #FFFFFF;
@@ -28,13 +29,15 @@ header nav ul {
   font-size: 30px;
   text-align: justify;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   border: 1px solid #323232;
   margin-bottom: 0;
+  color: #AFAFAF;
 }
 header nav ul li {
-  border: 1px solid red;
+  border: 1px solid #323232;
   width: 50%;
   line-height: 50px;
   display: flex;
@@ -43,6 +46,10 @@ header nav ul li {
 header nav ul li a {
   color: #FFFFFF;
   text-decoration: none;
+}
+header .logo {
+  align-items: center;
+  color: #AFAFAF;
 }
 @media screen and (min-width: 1280px) {
   header .logo {
@@ -65,9 +72,9 @@ header nav ul li a {
 }
 
 .footer {
-  height: 70vh;
   width: auto;
   background-color: #323232;
+  height: auto;
 }
 
 .footer__address {
@@ -78,6 +85,10 @@ header nav ul li a {
 .footer__address .footer {
   display: flex;
   flex-direction: column;
+  height: 70vh;
+  width: auto;
+  background-color: #323232;
+  height: auto;
   background-color: #323232;
 }
 @media screen and (min-width: 1280px) {
@@ -99,6 +110,7 @@ header nav ul li a {
 }
 .footer__address .footer__socials {
   order: 2;
+  size: 100px;
 }
 @media screen and (min-width: 1280px) {
   .footer__address .footer__socials {

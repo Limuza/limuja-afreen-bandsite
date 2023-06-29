@@ -38,38 +38,6 @@
 }
 
 
-
-
-// &__menu {
-//   color: $secondary-alabaster;
-//   grid-area: menu;
-//   width: 100%;
-// ;
-//   grid-template-columns: 1fr 1fr;
-//   gap: 2rem;
-//   justify-items: center;
-//   align-items: center;
-//   font-size: 2.4rem;
-//   @include tablet {
-//     width: auto;
-//   }
-//   &--li {
-//     width: 100%;
-//     &-item {
-//       height: 7.5rem;
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//       &:hover,
-//       &:active {
-//         border-bottom: 5px solid $primary-silver;
-//         color: $primary-silver;
-//         font-weight: 600;
-//       }
-//     }
-//   }
-// }
-
 .show-hero-banner {
   display: flex;
   flex-direction: column;
@@ -82,6 +50,7 @@
     color: $primary-white;
     font-size: 35px;
     padding: 10px;
+    align-items:left;
     @media screen and (min-width: $desktop-width) {
       font-size: 60px;
       padding: 20px;
@@ -113,6 +82,7 @@
   color: $primary-white;
   padding: 5%;
   font-weight: bold;
+  
   @include tablet {
     flex-direction: row;
     flex-wrap: wrap;
@@ -136,9 +106,10 @@
   justify-content: left;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  
 
   @media screen and (min-width: $desktop-width) {
+    table-layout:fixed;
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -148,14 +119,19 @@
   }
   &__title {
     font-weight: 100;
+    align-items: center;
   }
 
   &__ul {
-    align-items: center;
+    align-items: left;
   }
 
   .tickets_show-date {
     font-family: $bold-font;
+  }
+
+  .tickets_title{
+    padding-left:2cm;
   }
 
   h3 {

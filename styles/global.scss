@@ -30,9 +30,11 @@ body {
 header {
     
     display: flex;
+    justify-content: center;
     flex-direction: column;
     background-color: $primary-black;
     color: $primary-white;
+   
 
 
     & nav {
@@ -42,12 +44,14 @@ header {
             font-size: 30px;
             text-align: justify;
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             border: 1px solid $primary-black;
             margin-bottom: 0;
+            color: $primary-silver;
             & li {
-                border: 1px solid red;
+                border: 1px solid $primary-black;
                 // display: inline-block;
                 width: 50%;
                 line-height: 50px;
@@ -56,8 +60,6 @@ header {
                 & a {
                     color: $primary-white;
                     text-decoration: none;
-                
-
                 }
                
                  
@@ -67,9 +69,12 @@ header {
     }
 
 
-    & .logo {
+.logo {
+        align-items: center;
+        color: $primary-silver;
         @media screen and (min-width:$desktop-width) {
             width: 30vw;
+            
 
 
         }
@@ -77,6 +82,7 @@ header {
 
     @media screen and (min-width:$tablet-width) {
         flex-direction: row;
+      
     }
 }
  .link--active {
@@ -91,9 +97,10 @@ header {
 
 // Footer
 .footer {
-    height: 70vh;
+    
     width:auto;
     background-color: $primary-black;
+    height: auto;
 
 }
 
@@ -105,6 +112,10 @@ padding: 0 0 1rem 0rem;
 .footer{
     display: flex;
     flex-direction: column;
+    height: 70vh;
+    width:auto;
+    background-color: $primary-black;
+    height: auto;
     background-color: $primary-black;
     @media screen and (min-width: $desktop-width) {
         flex-direction: row;
@@ -121,6 +132,7 @@ padding: 0 0 1rem 0rem;
     }
     &__socials {
         order: 2;
+        size: 100px;
         @media screen and (min-width: $desktop-width) {
             width:20%;
             display: inline-block;

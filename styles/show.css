@@ -59,6 +59,7 @@
   color: #FFFFFF;
   font-size: 35px;
   padding: 10px;
+  align-items: left;
 }
 @media screen and (min-width: 1280px) {
   .show-hero-banner__title {
@@ -120,10 +121,10 @@
   justify-content: left;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
 }
 @media screen and (min-width: 1280px) {
   .tickets {
+    table-layout: fixed;
     flex-direction: column;
     flex-wrap: wrap;
   }
@@ -136,12 +137,16 @@
 }
 .tickets__title {
   font-weight: 100;
+  align-items: center;
 }
 .tickets__ul {
-  align-items: center;
+  align-items: left;
 }
 .tickets .tickets_show-date {
   font-family: "Avenir Next Bold";
+}
+.tickets .tickets_title {
+  padding-left: 2cm;
 }
 .tickets h3 {
   color: #AFAFAF;
